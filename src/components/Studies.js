@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 
 class Studies extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
   render() {
     return (
       <form>
@@ -23,5 +28,4 @@ class Studies extends Component {
     );
   }
 }
-
 export default Studies;
