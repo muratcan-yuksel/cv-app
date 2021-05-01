@@ -4,8 +4,16 @@ import Informatsion from "./Informatsion";
 import Studies from "./Studies";
 
 //this one will be the html elements
-function PreviewCV(props) {
-  return <h1>Previewing your CV</h1>;
+class PreviewCV extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+  render() {
+    return <h1>Previewing your CV</h1>;
+  }
 }
 //this one will be the form
 class UserInput extends Component {
