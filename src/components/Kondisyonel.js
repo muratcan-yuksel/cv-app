@@ -4,51 +4,51 @@ import Informatsion from "./Informatsion";
 import Studies from "./Studies";
 
 //this one will be the html elements
-function UserGreeting(props) {
-  return <h1>Welcome back!</h1>;
+function PreviewCV(props) {
+  return <h1>Previewing your CV</h1>;
 }
 //this one will be the form
-function GuestGreeting(props) {
+function UserInput(props) {
   return <h1>Please sign up</h1>;
 }
-function Greeting(props) {
+function Display(props) {
   const isFinished = props.isFinished;
   if (isFinished) {
-    return <UserGreeting />;
+    return <PreviewCV />;
   }
-  return <GuestGreeting />;
+  return <UserInput />;
 }
-function LoginButton(props) {
+function PreviewButton(props) {
   return <button onClick={props.onClick}>Login</button>;
 }
-function LogoutButton(props) {
+function EditButton(props) {
   return <button onClick={props.onClick}>Logout</button>;
 }
 
 class App extends Component {
   constructor(props) {
     super(props);
-    this.handleLoginClick = this.handleLoginClick.bind(this);
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
+    this.handlePreviewClick = this.handlePreviewClick.bind(this);
+    this.handleEditClick = this.handleEditClick.bind(this);
     this.state = { isFinished: false };
   }
-  handleLoginClick() {
+  handlePreviewClick() {
     this.setState({ isFinished: true });
   }
-  handleLogoutClick() {
+  handleEditClick() {
     this.setState({ isFinished: false });
   }
   render() {
     const isFinished = this.state.isFinished;
     let button;
     if (isFinished) {
-      button = <LogoutButton onClick={this.handleLogoutClick} />;
+      button = <EditButton onClick={this.handleEditClick} />;
     } else {
-      button = <LoginButton onClick={this.handleLoginClick} />;
+      button = <PreviewButton onClick={this.handlePreviewClick} />;
     }
     return (
       <div>
-        <Greeting isFinished={isFinished} />
+        <Display isFinished={isFinished} />
         {button}
         {/* <Informatsion />
         <Work />
