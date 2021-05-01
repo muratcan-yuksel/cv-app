@@ -12,8 +12,8 @@ function GuestGreeting(props) {
   return <h1>Please sign up</h1>;
 }
 function Greeting(props) {
-  const isLoggedIn = props.isLoggedIn;
-  if (isLoggedIn) {
+  const isFinished = props.isFinished;
+  if (isFinished) {
     return <UserGreeting />;
   }
   return <GuestGreeting />;
@@ -30,25 +30,25 @@ class App extends Component {
     super(props);
     this.handleLoginClick = this.handleLoginClick.bind(this);
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.state = { isLoggedIn: false };
+    this.state = { isFinished: false };
   }
   handleLoginClick() {
-    this.setState({ isLoggedIn: true });
+    this.setState({ isFinished: true });
   }
   handleLogoutClick() {
-    this.setState({ isLoggedIn: false });
+    this.setState({ isFinished: false });
   }
   render() {
-    const isLoggedIn = this.state.isLoggedIn;
+    const isFinished = this.state.isFinished;
     let button;
-    if (isLoggedIn) {
+    if (isFinished) {
       button = <LogoutButton onClick={this.handleLogoutClick} />;
     } else {
       button = <LoginButton onClick={this.handleLoginClick} />;
     }
     return (
       <div>
-        <Greeting isLoggedIn={isLoggedIn} />
+        <Greeting isFinished={isFinished} />
         {button}
         {/* <Informatsion />
         <Work />
