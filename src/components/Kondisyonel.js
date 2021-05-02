@@ -26,7 +26,12 @@ class UserInput extends Component {
     this.state = { name: null };
   }
   onTrigger = (event) => {
-    this.props.parentCallback(this.state.name);
+    this.props.parentCallback(
+      <div>
+        <h1>{this.state.name}</h1>
+        <p>yo man</p>
+      </div>
+    );
     event.preventDefault();
   };
   handleName = (e) => {
