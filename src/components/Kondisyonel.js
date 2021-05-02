@@ -8,11 +8,14 @@ class PreviewCV extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      data: this.props.toChild,
+    };
   }
 
   render() {
-    return <h1>Previewing your CV</h1>;
+    const { data } = this.state;
+    return <h1>Previewing your CV {data}</h1>;
   }
 }
 //this one will be the form
@@ -105,12 +108,15 @@ class Display extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      data: "data's comin'",
+    };
   }
   render() {
+    const { data } = this.state;
     const isFinished = this.props.isFinished;
     if (isFinished) {
-      return <PreviewCV />;
+      return <PreviewCV toChild={data} />;
     }
     return <UserInput />;
   }
