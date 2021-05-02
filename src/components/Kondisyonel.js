@@ -106,20 +106,13 @@ class Display extends Component {
     super(props);
 
     this.state = {};
-    render(){
-      const isFinished = props.isFinished;
-      let displayButton;
-      if (isFinished) {
-         displayButton= <PreviewCV />;
-      }
-       displayButton= <UserInput />;
-       return(
-        <div>
-          {displayButton}
-        </div>
-      )
+  }
+  render() {
+    const isFinished = this.props.isFinished;
+    if (isFinished) {
+      return <PreviewCV />;
     }
-   
+    return <UserInput />;
   }
 }
 function PreviewButton(props) {
