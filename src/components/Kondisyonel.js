@@ -25,10 +25,14 @@ class UserInput extends Component {
 
     this.state = {};
   }
+  onTrigger = (event) => {
+    this.props.parentCallback("Data from child");
+    event.preventDefault();
+}
 
   render() {
     return (
-      <form>
+      <form onChange= {this.onTrigger}>
         <section id="information">
           <h1>Personal Information</h1>
           <div>
@@ -97,20 +101,17 @@ class UserInput extends Component {
   }
 }
 
-// function Display(props) {
-//   const isFinished = props.isFinished;
-//   if (isFinished) {
-//     return <PreviewCV />;
-//   }
-//   return <UserInput />;
-// }
+
 class Display extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      data: "data's comin'",
+      data: null
     };
+  }
+  handleCallback = (childData) =>{
+    this.setState({data:childData})
   }
   render() {
     const { data } = this.state;
@@ -118,7 +119,7 @@ class Display extends Component {
     if (isFinished) {
       return <PreviewCV toChild={data} />;
     }
-    return <UserInput />;
+    return <UserInput parentCallback ={this.handleCallback} />;
   }
 }
 function PreviewButton(props) {
