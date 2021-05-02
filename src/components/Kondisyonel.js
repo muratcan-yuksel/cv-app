@@ -94,12 +94,33 @@ class UserInput extends Component {
   }
 }
 
-function Display(props) {
-  const isFinished = props.isFinished;
-  if (isFinished) {
-    return <PreviewCV />;
+// function Display(props) {
+//   const isFinished = props.isFinished;
+//   if (isFinished) {
+//     return <PreviewCV />;
+//   }
+//   return <UserInput />;
+// }
+class Display extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+    render(){
+      const isFinished = props.isFinished;
+      let displayButton;
+      if (isFinished) {
+         displayButton= <PreviewCV />;
+      }
+       displayButton= <UserInput />;
+       return(
+        <div>
+          {displayButton}
+        </div>
+      )
+    }
+   
   }
-  return <UserInput />;
 }
 function PreviewButton(props) {
   return <button onClick={props.onClick}>Login</button>;
