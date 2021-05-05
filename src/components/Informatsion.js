@@ -3,32 +3,71 @@ import React, { Component } from "react";
 class Informatsion extends Component {
   render() {
     return (
-      <form>
+      <div>
         <h1>Personal Information</h1>
         <div>
-          <input type="text" placeholder="Name" required />
-          <input type="text" placeholder="Last name" required />
+          <label htmlFor="name">First Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Name"
+            required
+          />
+          <label htmlFor="lastName">Last Name</label>
+          <input
+            type="text"
+            name="lastName"
+            id="lastName"
+            placeholder="Last name"
+            required
+          />
         </div>
         <div>
+          <label htmlFor="email">Email</label>
+
           <input
+            name="email"
+            id="email"
             type="email"
             placeholder="e.g. something@someone.com"
             required
           />
         </div>
         <div>
-          <input type="tel" placeholder="Phone number" />
+          <label htmlFor="tel">Phone Number</label>
+
+          <input type="tel" name="tel" id="tel" placeholder="Phone number" />
         </div>
         <div>
-          <input type="text" placeholder="Your LinkedIn here" required />
+          <label htmlFor="linkedin">LinkedIn</label>
+          <input
+            type="text"
+            name="linkedin"
+            id="linkedin"
+            placeholder="Your LinkedIn here"
+            required
+          />
         </div>
         <div>
-          <input type="text" placeholder="Your GitHub here" required />
+          <label htmlFor="github">GitHub</label>
+          <input
+            type="text"
+            name="github"
+            id="github"
+            placeholder="Your GitHub here"
+            required
+          />
         </div>
         <div>
-          <textarea placeholder="Talk about yourself a bit" />
+          <label htmlFor="bio">Bio</label>
+          <textarea
+            name="bio"
+            id="bio"
+            placeholder="Talk about yourself a bit"
+          />
         </div>
-      </form>
+      </div>
     );
   }
 }
