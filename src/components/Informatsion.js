@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+//I need to come back to this and figure out what to do
 class Informatsion extends Component {
   render() {
     return (
@@ -25,7 +25,6 @@ class Informatsion extends Component {
         </div>
         <div>
           <label htmlFor="email">Email</label>
-
           <input
             name="email"
             id="email"
@@ -36,7 +35,6 @@ class Informatsion extends Component {
         </div>
         <div>
           <label htmlFor="tel">Phone Number</label>
-
           <input type="tel" name="tel" id="tel" placeholder="Phone number" />
         </div>
         <div>
