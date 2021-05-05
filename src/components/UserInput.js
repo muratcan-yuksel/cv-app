@@ -60,6 +60,20 @@ class UserInput extends Component {
       let studies = [...this.state.studies];
       studies[e.target.dataset.id][e.target.className] = e.target.value;
       this.setState({ studies }, () => console.log(this.state.studies));
+    } else if (
+      [
+        "firstName",
+        "lastName",
+        "email",
+        "tel",
+        "linkedin",
+        "github",
+        "bio",
+      ].includes(e.target.className)
+    ) {
+      let information = [...this.state.information];
+      information[e.target.dataset.id][e.target.className] = e.target.value;
+      this.setState({ information }, () => console.log(this.state.information));
     } else {
       this.setState({ [e.target.name]: e.target.value });
     }
@@ -102,9 +116,10 @@ class UserInput extends Component {
   render() {
     let { work } = this.state;
     let { studies } = this.state;
+    let { information } = this.state;
     return (
       <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
-        <Information />
+        <Information information={information} />
         <button onClick={this.addWork}>Add work experience</button>
         <Work work={work} />
         <button onClick={this.addStudies}>Add education</button>
