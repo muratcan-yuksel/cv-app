@@ -51,7 +51,7 @@ class UserInput extends Component {
     ) {
       let work = [...this.state.work];
       work[e.target.dataset.id][e.target.className] = e.target.value;
-      this.setState({ work }, () => console.log(this.state.work));
+      this.setState({ work });
     } else if (
       ["schoolName", "studyArea", "schoolStartDate", "schoolEndDate"].includes(
         e.target.className
@@ -59,7 +59,7 @@ class UserInput extends Component {
     ) {
       let studies = [...this.state.studies];
       studies[e.target.dataset.id][e.target.className] = e.target.value;
-      this.setState({ studies }, () => console.log(this.state.studies));
+      this.setState({ studies });
     } else if (
       [
         "firstName",
@@ -73,7 +73,7 @@ class UserInput extends Component {
     ) {
       let information = [...this.state.information];
       information[e.target.dataset.id][e.target.className] = e.target.value;
-      this.setState({ information }, () => console.log(this.state.information));
+      this.setState({ information });
     } else {
       this.setState({ [e.target.name]: e.target.value });
     }
@@ -111,6 +111,7 @@ class UserInput extends Component {
     console.log(this.state.work);
     console.log(this.state.studies);
     console.log(this.state.information);
+    console.log(this.state);
   };
 
   render() {
