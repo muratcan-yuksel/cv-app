@@ -1,73 +1,105 @@
-import React, { Component } from "react";
-//I need to come back to this and figure out what to do
-class Informatsion extends Component {
-  render() {
+import React from "react";
+
+function Informatsion(props) {
+  return props.information.map((item, index) => {
+    let firstNameId = `firstName ${index}`,
+      lastNameId = `lastName ${index}`,
+      emailId = `email ${index}`,
+      telId = `tel ${index}`,
+      linkedinId = `linkedin ${index}`,
+      githubId = `github ${index}`,
+      bioId = `${index}`;
+
     return (
-      <div>
+      <div key={index}>
         <h1>Personal Information</h1>
         <div>
-          <label htmlFor="name">First Name</label>
+          <label htmlFor={firstNameId}>First Name</label>
           <input
             type="text"
-            name="name"
-            id="name"
+            name={firstNameId}
+            data-id={index}
+            id={firstNameId}
+            defaultValue={props.information[index].firstName}
+            className="firstName"
             placeholder="Name"
             required
           />
-          <label htmlFor="lastName">Last Name</label>
+          <label htmlFor={lastNameId}>Last Name</label>
           <input
             type="text"
-            name="lastName"
-            id="lastName"
+            name={lastNameId}
+            data-id={index}
+            id={lastNameId}
+            defaultValue={props.information[index].lastName}
+            className="lastName"
             placeholder="Last name"
             required
           />
         </div>
         <div>
-          <label htmlFor="email">Email</label>
+          <label htmlFor={emailId}>Email</label>
           <input
-            name="email"
-            id="email"
+            name={emailId}
+            data-id={index}
+            id={emailId}
+            defaultValue={props.information[index].email}
+            className="email"
             type="email"
             placeholder="e.g. something@someone.com"
             required
           />
         </div>
         <div>
-          <label htmlFor="tel">Phone Number</label>
-          <input type="tel" name="tel" id="tel" placeholder="Phone number" />
+          <label htmlFor={telId}>Phone Number</label>
+          <input
+            type="tel"
+            name={telId}
+            data-id={index}
+            id={telId}
+            defaultValue={props.information[index].tel}
+            className="tel"
+            placeholder="Phone number"
+          />
         </div>
         <div>
-          <label htmlFor="linkedin">LinkedIn</label>
+          <label htmlFor={linkedinId}>LinkedIn</label>
           <input
             type="text"
-            name="linkedin"
-            id="linkedin"
+            name={linkedinId}
+            data-id={index}
+            id={linkedinId}
+            defaultValue={props.information[index].linkedin}
+            className="linkedin"
             placeholder="Your LinkedIn here"
-            required
           />
         </div>
         <div>
-          <label htmlFor="github">GitHub</label>
+          <label htmlFor={githubId}>GitHub</label>
           <input
             type="text"
-            name="github"
-            id="github"
+            name={githubId}
+            data-id={index}
+            id={githubId}
+            defaultValue={props.information[index].github}
+            className="github"
             placeholder="Your GitHub here"
-            required
           />
         </div>
         <div>
-          <label htmlFor="bio">Bio</label>
+          <label htmlFor={bioId}>Bio</label>
           <textarea
-            name="bio"
-            id="bio"
+            name={bioId}
+            data-id={index}
+            id={bioId}
+            defaultValue={props.information[index].bio}
+            className="bio"
             placeholder="Talk about yourself a bit"
           />
         </div>
       </div>
     );
-  }
+  });
 }
 
 export default Informatsion;

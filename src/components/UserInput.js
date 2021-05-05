@@ -8,7 +8,17 @@ class UserInput extends Component {
     super(props);
 
     this.state = {
-      information: "",
+      information: [
+        {
+          firstName: "",
+          lastName: "",
+          email: "",
+          tel: "",
+          linkedin: "",
+          github: "",
+          bio: "",
+        },
+      ],
       work: [
         {
           position: "",
