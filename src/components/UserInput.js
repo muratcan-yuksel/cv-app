@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Information from "./Informatsion";
+import Work from "./Work";
+import Studies from "./Studies";
 
 class UserInput extends Component {
   constructor(props) {
@@ -16,6 +18,14 @@ class UserInput extends Component {
           endDate: "",
         },
       ],
+      studies: [
+        {
+          schoolName: "",
+          studyArea: "",
+          schoolStartDate: "",
+          schoolEndDate: "",
+        },
+      ],
     };
   }
 
@@ -23,6 +33,8 @@ class UserInput extends Component {
     return (
       <form>
         <Information />
+        {/* <Work work={work} />
+        <Studies /> */}
       </form>
     );
   }

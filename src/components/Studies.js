@@ -1,31 +1,64 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Studies extends Component {
-  constructor(props) {
-    super(props);
+function Studies() {
+  return props.studes.map((item, index) => {
+    let schoolNameId = `School Name No ${index}`,
+      studyAreaId = `Study Area No ${index}`,
+      schoolStartDateId = `School start date no ${index}`,
+      schoolEndDateId = `School end date ${index}`;
 
-    this.state = {};
-  }
-  render() {
     return (
-      <form>
+      <div key={index}>
         <h1>Education</h1>
         <div>
-          <input type="text" placeholder="School name here" />
+          <label htmlFor={schoolNameId}>{`School Name #${index + 1}`}</label>
+          <input
+            type="text"
+            name={schoolNameId}
+            data-id={index}
+            id={schoolNameId}
+            value={props.studies[index].schoolName}
+            classname="schoolName"
+            placeholder="School name here"
+          />
         </div>
         <div>
-          <input type="text" placeholder="Study area" />
+          <label htmlFor={studyAreaId}>{`Study area #${index + 1}`}</label>
+
+          <input
+            type="text"
+            name={studyAreaId}
+            data-id={index}
+            id={studyAreaId}
+            value={props.studies[index].studyArea}
+            classname="studyArea"
+            placeholder="Study area"
+          />
         </div>
         <div>
-          <label>Start date</label>
-          <input type="date"></input>
+          <label htmlFor={schoolStartDateId}>{`School start date #${
+            index + 1
+          }`}</label>
+          <input
+            type="date"
+            name={schoolStartDateId}
+            data-id={index}
+            id={schoolStartDateId}
+            value={props.studies[index].schoolStartDate}
+            classname="schoolStartDate"
+          ></input>
         </div>
         <div>
-          <label>End date</label>
-          <input type="date"></input>
+        <label htmlFor={schoolEndDateId}>{`School end date #${
+          <input type="date" name={schoolEndDateId}
+            data-id={index}
+            id={schoolEndDateId}
+            value={props.studies[index].schoolEndDate}
+            classname="schoolEndDate"></input>
         </div>
-      </form>
+      </div>
     );
-  }
+  });
 }
+
 export default Studies;
