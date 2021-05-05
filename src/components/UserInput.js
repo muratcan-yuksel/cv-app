@@ -7,7 +7,7 @@ class UserInput extends Component {
 
     this.state = {
       information: "",
-      experience: [
+      work: [
         {
           position: "",
           company: "",
