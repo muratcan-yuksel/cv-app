@@ -55,12 +55,18 @@ class UserInput extends Component {
       ],
     }));
   };
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state.work);
+    console.log(this.state.studies);
+    console.log(this.state.information);
+  };
 
   render() {
     let { work } = this.state;
     let { studies } = this.state;
     return (
-      <form>
+      <form onSubmit={this.handleSubmit}>
         <Information />
         <button onClick={this.addWork}>Add work experience</button>
         <Work work={work} />
