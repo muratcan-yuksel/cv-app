@@ -5,7 +5,18 @@ class UserInput extends Component {
   constructor(props) {
     super(props);
 
-    this.state = { information: "" };
+    this.state = {
+      information: "",
+      experience: [
+        {
+          position: "",
+          company: "",
+          jobDescription: "",
+          startDate: "",
+          endDate: "",
+        },
+      ],
+    };
   }
 
   render() {
