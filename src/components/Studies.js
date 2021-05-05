@@ -24,7 +24,6 @@ function Studies() {
         </div>
         <div>
           <label htmlFor={studyAreaId}>{`Study area #${index + 1}`}</label>
-
           <input
             type="text"
             name={studyAreaId}
@@ -49,12 +48,17 @@ function Studies() {
           ></input>
         </div>
         <div>
-        <label htmlFor={schoolEndDateId}>{`School end date #${
-          <input type="date" name={schoolEndDateId}
+          <label htmlFor={schoolEndDateId}>{`School end date #${
+            index + 1
+          }`}</label>
+          <input
+            type="date"
+            name={schoolEndDateId}
             data-id={index}
             id={schoolEndDateId}
             value={props.studies[index].schoolEndDate}
-            classname="schoolEndDate"></input>
+            classname="schoolEndDate"
+          ></input>
         </div>
       </div>
     );
