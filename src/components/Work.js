@@ -10,7 +10,6 @@ const Work = (props) => {
 
     return (
       <div key={index}>
-        <h1>Experience</h1>
         <div>
           <label htmlFor={positionId}>{`Position No ${index + 1}`}</label>
           <input

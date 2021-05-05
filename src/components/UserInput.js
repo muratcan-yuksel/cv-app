@@ -120,8 +120,12 @@ class UserInput extends Component {
     return (
       <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
         <Information information={information} />
+        <h1>Experience</h1>
+
         <button onClick={this.addWork}>Add work experience</button>
         <Work work={work} />
+        <h1>Education</h1>
+
         <button onClick={this.addStudies}>Add education</button>
         <Studies studies={studies} />
         <input type="submit" value="Submit" />

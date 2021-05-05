@@ -9,7 +9,6 @@ function Studies(props) {
 
     return (
       <div key={index}>
-        <h1>Education</h1>
         <div>
           <label htmlFor={schoolNameId}>{`School Name #${index + 1}`}</label>
           <input
