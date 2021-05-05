@@ -28,6 +28,33 @@ class UserInput extends Component {
       ],
     };
   }
+  addWork = (e) => {
+    this.setState((prevState) => ({
+      work: [
+        ...prevState.work,
+        {
+          position: "",
+          company: "",
+          jobDescription: "",
+          startDate: "",
+          endDate: "",
+        },
+      ],
+    }));
+  };
+  addStudies = (e) => {
+    this.setState((prevState) => ({
+      studies: [
+        ...prevState.studies,
+        {
+          schoolName: "",
+          studyArea: "",
+          schoolStartDate: "",
+          schoolEndDate: "",
+        },
+      ],
+    }));
+  };
 
   render() {
     let { work } = this.state;
@@ -35,7 +62,9 @@ class UserInput extends Component {
     return (
       <form>
         <Information />
+        <button onClick={this.addWork}>Add work experience</button>
         <Work work={work} />
+        <button onClick={this.addStudies}>Add education</button>
         <Studies studies={studies} />
       </form>
     );
