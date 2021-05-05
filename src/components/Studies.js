@@ -1,7 +1,7 @@
 import React from "react";
 
-function Studies() {
-  return props.studes.map((item, index) => {
+function Studies(props) {
+  return props.studies.map((item, index) => {
     let schoolNameId = `School Name No ${index}`,
       studyAreaId = `Study Area No ${index}`,
       schoolStartDateId = `School start date no ${index}`,

@@ -30,11 +30,13 @@ class UserInput extends Component {
   }
 
   render() {
+    let { work } = this.state;
+    let { studies } = this.state;
     return (
       <form>
         <Information />
-        {/* <Work work={work} />
-        <Studies /> */}
+        <Work work={work} />
+        <Studies studies={studies} />
       </form>
     );
   }
