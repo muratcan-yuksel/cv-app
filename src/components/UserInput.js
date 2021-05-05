@@ -28,6 +28,25 @@ class UserInput extends Component {
       ],
     };
   }
+
+  handleChange = (e) => {
+    if (
+      [
+        "position",
+        "company",
+        "jobDescription",
+        "startDate",
+        "endDate",
+      ].includes(e.target.className)
+    ) {
+      let work = [...this.state.work];
+      work[e.target.dataset.id][e.target.className] = e.target.value;
+      this.setState({ work }, () => console.log(this.state.work));
+    } else {
+      this.setState({ [e.target.name]: e.target.value });
+    }
+  };
+
   addWork = (e) => {
     this.setState((prevState) => ({
       work: [
@@ -66,12 +85,13 @@ class UserInput extends Component {
     let { work } = this.state;
     let { studies } = this.state;
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
         <Information />
         <button onClick={this.addWork}>Add work experience</button>
         <Work work={work} />
         <button onClick={this.addStudies}>Add education</button>
         <Studies studies={studies} />
+        <input type="submit" value="Submit" />
       </form>
     );
   }

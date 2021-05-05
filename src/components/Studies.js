@@ -17,8 +17,8 @@ function Studies(props) {
             name={schoolNameId}
             data-id={index}
             id={schoolNameId}
-            value={props.studies[index].schoolName}
-            classname="schoolName"
+            defaultValue={props.studies[index].schoolName}
+            className="schoolName"
             placeholder="School name here"
           />
         </div>
@@ -29,8 +29,8 @@ function Studies(props) {
             name={studyAreaId}
             data-id={index}
             id={studyAreaId}
-            value={props.studies[index].studyArea}
-            classname="studyArea"
+            defaultValue={props.studies[index].studyArea}
+            className="studyArea"
             placeholder="Study area"
           />
         </div>
@@ -43,8 +43,8 @@ function Studies(props) {
             name={schoolStartDateId}
             data-id={index}
             id={schoolStartDateId}
-            value={props.studies[index].schoolStartDate}
-            classname="schoolStartDate"
+            defaultValue={props.studies[index].schoolStartDate}
+            className="schoolStartDate"
           ></input>
         </div>
         <div>
@@ -56,8 +56,8 @@ function Studies(props) {
             name={schoolEndDateId}
             data-id={index}
             id={schoolEndDateId}
-            value={props.studies[index].schoolEndDate}
-            classname="schoolEndDate"
+            defaultValue={props.studies[index].schoolEndDate}
+            className="schoolEndDate"
           ></input>
         </div>
       </div>

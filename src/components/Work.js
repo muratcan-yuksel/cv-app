@@ -18,7 +18,7 @@ const Work = (props) => {
             name={positionId}
             data-id={index}
             id={positionId}
-            value={props.work[index].position}
+            defaultValue={props.work[index].position}
             className="position"
             placeholder="Your position here"
           />
@@ -30,8 +30,8 @@ const Work = (props) => {
             name={companyId}
             data-id={index}
             id={companyId}
-            value={props.work[index].company}
-            classname="company"
+            defaultValue={props.work[index].company}
+            className="company"
             placeholder="Company name here"
           />
         </div>
@@ -44,8 +44,8 @@ const Work = (props) => {
             name={jobDescriptionId}
             data-id={index}
             id={jobDescriptionId}
-            value={props.work[index].jobDescription}
-            classname="jobDescription"
+            defaultValue={props.work[index].jobDescription}
+            className="jobDescription"
             placeholder="Job description(Optional)"
           />
         </div>
@@ -55,8 +55,8 @@ const Work = (props) => {
             name={startDateId}
             data-id={index}
             id={startDateId}
-            value={props.work[index].startDate}
-            classname="startDate"
+            defaultValue={props.work[index].startDate}
+            className="startDate"
             type="date"
           ></input>
         </div>
@@ -66,8 +66,8 @@ const Work = (props) => {
             name={endDateId}
             data-id={index}
             id={endDateId}
-            value={props.work[index].endDate}
-            classname="endDate"
+            defaultValue={props.work[index].endDate}
+            className="endDate"
             type="date"
           ></input>
         </div>
