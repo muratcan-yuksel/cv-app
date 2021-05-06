@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Information from "./Informatsion";
+import Informatsion from "./Informatsion";
 import Work from "./Work";
 import Studies from "./Studies";
 
@@ -106,21 +106,21 @@ class UserInput extends Component {
       ],
     }));
   };
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(this.state.work);
-    console.log(this.state.studies);
-    console.log(this.state.information);
-    console.log(this.state);
-  };
+  // handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log(this.state.work);
+  //   console.log(this.state.studies);
+  //   console.log(this.state.information);
+  //   console.log(this.state);
+  // };
 
   render() {
     let { work } = this.state;
     let { studies } = this.state;
     let { information } = this.state;
     return (
-      <form onSubmit={this.handleSubmit} onChange={this.handleChange}>
-        <Information information={information} />
+      <div onChange={this.handleChange}>
+        <Informatsion information={information} />
         <h1>Experience</h1>
 
         <button onClick={this.addWork}>Add work experience</button>
@@ -130,7 +130,7 @@ class UserInput extends Component {
         <button onClick={this.addStudies}>Add education</button>
         <Studies studies={studies} />
         <input type="submit" value="Submit" />
-      </form>
+      </div>
     );
   }
 }
