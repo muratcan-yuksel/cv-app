@@ -106,6 +106,13 @@ class UserInput extends Component {
       ],
     }));
   };
+  onTrigger = (event) => {
+    this.props.parentCallback("data heyah");
+  };
+  twoCalls = (e) => {
+    this.onTrigger(e);
+    this.handleChange(e);
+  };
   // handleSubmit = (e) => {
   //   e.preventDefault();
   //   console.log(this.state.work);
@@ -119,7 +126,7 @@ class UserInput extends Component {
     let { studies } = this.state;
     let { information } = this.state;
     return (
-      <div onChange={this.handleChange}>
+      <div onChange={this.twoCalls}>
         <Informatsion information={information} />
         <h1>Experience</h1>
 
