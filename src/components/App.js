@@ -26,14 +26,16 @@ class PreviewCV extends Component {
       <div>
         <div>
           <h3>Personal Information</h3>
-          {Object.keys(infoObj).map((key) => (
-            <p>{infoObj[key]}</p>
+          {Object.keys(infoObj).map((key, index) => (
+            <p key={index}>{infoObj[key]}</p>
           ))}
         </div>
         <div>
           <h3>Experience</h3>
           {workArr.map((item) =>
-            Object.keys(item).map((key) => <p>{item[key]}</p>)
+            Object.keys(item).map((key, index) => (
+              <p key={index}>{item[key]}</p>
+            ))
           )}
         </div>
       </div>
