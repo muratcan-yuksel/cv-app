@@ -16,15 +16,26 @@ class PreviewCV extends Component {
 
   render() {
     const { data } = this.state;
+    //information as object
     const infoObj = data.information[0];
-    console.log(infoObj);
+    //work as array
+    const workArr = data.work;
+    console.log(workArr);
     console.log(data);
-    const people = [{ name: "chris" }, { name: "nick" }];
     return (
       <div>
-        {Object.keys(infoObj).map((key) => (
-          <p>{infoObj[key]}</p>
-        ))}
+        <div>
+          <h3>Personal Information</h3>
+          {Object.keys(infoObj).map((key) => (
+            <p>{infoObj[key]}</p>
+          ))}
+        </div>
+        <div>
+          <h3>Experience</h3>
+          {workArr.map((item) =>
+            Object.keys(item).map((key) => <p>{item[key]}</p>)
+          )}
+        </div>
       </div>
     );
   }
