@@ -20,6 +20,8 @@ class PreviewCV extends Component {
     const infoObj = data.information[0];
     //work as array
     const workArr = data.work;
+    //studies array
+    const studiesArr = data.studies;
     console.log(workArr);
     console.log(data);
     return (
@@ -33,6 +35,14 @@ class PreviewCV extends Component {
         <div>
           <h3>Experience</h3>
           {workArr.map((item) =>
+            Object.keys(item).map((key, index) => (
+              <p key={index}>{item[key]}</p>
+            ))
+          )}
+        </div>
+        <div>
+          <h3>Studies</h3>
+          {studiesArr.map((item) =>
             Object.keys(item).map((key, index) => (
               <p key={index}>{item[key]}</p>
             ))
