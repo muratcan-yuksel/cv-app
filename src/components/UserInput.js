@@ -107,11 +107,12 @@ class UserInput extends Component {
     }));
   };
   onTrigger = (event) => {
-    this.props.parentCallback("data heyah");
+    this.props.parentCallback(this.state);
   };
   twoCalls = (e) => {
     this.onTrigger(e);
     this.handleChange(e);
+    // console.log(this.state);
   };
   // handleSubmit = (e) => {
   //   e.preventDefault();
@@ -136,7 +137,6 @@ class UserInput extends Component {
 
         <button onClick={this.addStudies}>Add education</button>
         <Studies studies={studies} />
-        <input type="submit" value="Submit" />
       </div>
     );
   }
