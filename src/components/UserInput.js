@@ -114,13 +114,6 @@ class UserInput extends Component {
     this.handleChange(e);
     // console.log(this.state);
   };
-  // handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   console.log(this.state.work);
-  //   console.log(this.state.studies);
-  //   console.log(this.state.information);
-  //   console.log(this.state);
-  // };
 
   render() {
     let { work } = this.state;
