@@ -16,13 +16,8 @@ class PreviewCV extends Component {
 
   render() {
     const { data } = this.state;
-    const items = data.information.map((item) => {
-      for (let ix in item) {
-        return <p>{item[ix]} </p>;
-      }
-    });
 
-    return <div>{items}</div>;
+    return <div></div>;
   }
 }
 
