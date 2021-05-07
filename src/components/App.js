@@ -16,8 +16,17 @@ class PreviewCV extends Component {
 
   render() {
     const { data } = this.state;
-
-    return <div></div>;
+    const infoObj = data.information[0];
+    console.log(infoObj);
+    console.log(data);
+    const people = [{ name: "chris" }, { name: "nick" }];
+    return (
+      <div>
+        {Object.keys(infoObj).map((key) => (
+          <p>{infoObj[key]}</p>
+        ))}
+      </div>
+    );
   }
 }
 
