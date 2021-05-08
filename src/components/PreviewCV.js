@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import UserInput from "./UserInput";
 import jsPDF from "jspdf";
+import "../styles/PreviewCV.css";
 
 class PreviewCV extends Component {
   constructor(props) {
@@ -32,28 +33,28 @@ class PreviewCV extends Component {
     return (
       <div>
         <div id="content">
-          <div>
+          <section>
             <h3>Personal Information</h3>
             {Object.keys(infoObj).map((key, index) => (
               <p key={index}>{infoObj[key]}</p>
             ))}
-          </div>
-          <div>
+          </section>
+          <section>
             <h3>Experience</h3>
             {workArr.map((item) =>
               Object.keys(item).map((key, index) => (
                 <p key={index}>{item[key]}</p>
               ))
             )}
-          </div>
-          <div>
+          </section>
+          <section>
             <h3>Studies</h3>
             {studiesArr.map((item) =>
               Object.keys(item).map((key, index) => (
                 <p key={index}>{item[key]}</p>
               ))
             )}
-          </div>
+          </section>
         </div>
         <button onClick={this.generatePDF} type="primary">
           Generate PDF
