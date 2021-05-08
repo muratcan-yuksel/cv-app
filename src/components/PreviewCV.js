@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import UserInput from "./UserInput";
+import jsPDF from "jspdf";
 
 class PreviewCV extends Component {
   constructor(props) {
@@ -9,7 +10,14 @@ class PreviewCV extends Component {
       data: this.props.toChild,
     };
   }
-  generatePDF = () => {};
+  generatePDF = () => {
+    let doc = new jsPDF("p", "pt", "a4");
+    doc.html(document.querySelector("#content"), {
+      callback: function (pdf) {
+        pdf.save("mypdf.pdf");
+      },
+    });
+  };
 
   render() {
     const { data } = this.state;
@@ -22,28 +30,30 @@ class PreviewCV extends Component {
     console.log(workArr);
     console.log(data);
     return (
-      <div id="content">
-        <div>
-          <h3>Personal Information</h3>
-          {Object.keys(infoObj).map((key, index) => (
-            <p key={index}>{infoObj[key]}</p>
-          ))}
-        </div>
-        <div>
-          <h3>Experience</h3>
-          {workArr.map((item) =>
-            Object.keys(item).map((key, index) => (
-              <p key={index}>{item[key]}</p>
-            ))
-          )}
-        </div>
-        <div>
-          <h3>Studies</h3>
-          {studiesArr.map((item) =>
-            Object.keys(item).map((key, index) => (
-              <p key={index}>{item[key]}</p>
-            ))
-          )}
+      <div>
+        <div id="content">
+          <div>
+            <h3>Personal Information</h3>
+            {Object.keys(infoObj).map((key, index) => (
+              <p key={index}>{infoObj[key]}</p>
+            ))}
+          </div>
+          <div>
+            <h3>Experience</h3>
+            {workArr.map((item) =>
+              Object.keys(item).map((key, index) => (
+                <p key={index}>{item[key]}</p>
+              ))
+            )}
+          </div>
+          <div>
+            <h3>Studies</h3>
+            {studiesArr.map((item) =>
+              Object.keys(item).map((key, index) => (
+                <p key={index}>{item[key]}</p>
+              ))
+            )}
+          </div>
         </div>
         <button onClick={this.generatePDF} type="primary">
           Generate PDF
