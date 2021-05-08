@@ -16,3 +16,10 @@
 .button {
   width: 30%;
 }
+.prevBtn {
+  display: flex;
+  justify-content: center;
+}
+.preview {
+  width: 20%;
+}

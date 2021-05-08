@@ -33,19 +33,21 @@ class PreviewCV extends Component {
     return (
       <div>
         <div id="content">
-          <section>
-            <h3>Personal Information</h3>
+          <h3>Personal Information</h3>
+          <section className="previews">
             {Object.keys(infoObj).map((key, index) => (
               <p key={index}>{infoObj[key]}</p>
             ))}
+            <div className="space"></div>
           </section>
-          <section>
-            <h3>Experience</h3>
+          <h3>Experience</h3>
+          <section className="previews">
             {workArr.map((item) =>
               Object.keys(item).map((key, index) => (
                 <p key={index}>{item[key]}</p>
               ))
             )}
+            <div className="space"></div>
           </section>
           <section>
             <h3>Studies</h3>
@@ -54,6 +56,7 @@ class PreviewCV extends Component {
                 <p key={index}>{item[key]}</p>
               ))
             )}
+            <div className="space"></div>
           </section>
         </div>
         <button onClick={this.generatePDF} type="primary">

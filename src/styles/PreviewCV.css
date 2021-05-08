@@ -6,3 +6,11 @@
 .information {
   display: grid;
 }
+.previews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.previews * {
+  margin: 2em;
+}

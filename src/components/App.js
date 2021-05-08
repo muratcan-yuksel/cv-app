@@ -1,11 +1,20 @@
 import React, { Component } from "react";
 import Display from "./Display";
+import "../styles/UserInput.css";
 
 function PreviewButton(props) {
-  return <button onClick={props.onClick}>Preview</button>;
+  return (
+    <button className="preview" onClick={props.onClick}>
+      Preview
+    </button>
+  );
 }
 function EditButton(props) {
-  return <button onClick={props.onClick}>Edit</button>;
+  return (
+    <button className="preview" onClick={props.onClick}>
+      Edit
+    </button>
+  );
 }
 
 class App extends Component {
@@ -32,7 +41,7 @@ class App extends Component {
     return (
       <div>
         <Display isFinished={isFinished} />
-        {button}
+        <div className="prevBtn">{button}</div>
       </div>
     );
   }
