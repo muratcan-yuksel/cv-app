@@ -9,6 +9,7 @@ class PreviewCV extends Component {
       data: this.props.toChild,
     };
   }
+  generatePDF = () => {};
 
   render() {
     const { data } = this.state;
@@ -21,7 +22,7 @@ class PreviewCV extends Component {
     console.log(workArr);
     console.log(data);
     return (
-      <div>
+      <div id="content">
         <div>
           <h3>Personal Information</h3>
           {Object.keys(infoObj).map((key, index) => (
@@ -44,6 +45,9 @@ class PreviewCV extends Component {
             ))
           )}
         </div>
+        <button onClick={this.generatePDF} type="primary">
+          Generate PDF
+        </button>
       </div>
     );
   }
