@@ -11,7 +11,6 @@ function Studies(props) {
     return (
       <div key={index}>
         <div>
-          <label htmlFor={schoolNameId}>{`School Name #${index + 1}`}</label>
           <input
             type="text"
             name={schoolNameId}
@@ -23,7 +22,6 @@ function Studies(props) {
           />
         </div>
         <div>
-          <label htmlFor={studyAreaId}>{`Study area #${index + 1}`}</label>
           <input
             type="text"
             name={studyAreaId}
@@ -35,9 +33,6 @@ function Studies(props) {
           />
         </div>
         <div>
-          <label htmlFor={schoolStartDateId}>{`School start date #${
-            index + 1
-          }`}</label>
           <input
             type="date"
             name={schoolStartDateId}
@@ -48,9 +43,6 @@ function Studies(props) {
           ></input>
         </div>
         <div>
-          <label htmlFor={schoolEndDateId}>{`School end date #${
-            index + 1
-          }`}</label>
           <input
             type="date"
             name={schoolEndDateId}

@@ -12,7 +12,6 @@ const Work = (props) => {
     return (
       <div key={index}>
         <div>
-          <label htmlFor={positionId}>{`Position No ${index + 1}`}</label>
           <input
             type="text"
             name={positionId}
@@ -24,7 +23,6 @@ const Work = (props) => {
           />
         </div>
         <div>
-          <label htmlFor={companyId}>{`Company No ${index + 1}`}</label>
           <input
             type="text"
             name={companyId}
@@ -36,9 +34,6 @@ const Work = (props) => {
           />
         </div>
         <div>
-          <label htmlFor={jobDescriptionId}>{`Job Description No ${
-            index + 1
-          }`}</label>
           <input
             type="text"
             name={jobDescriptionId}
@@ -50,7 +45,6 @@ const Work = (props) => {
           />
         </div>
         <div>
-          <label htmlFor={startDateId}>{`Start Date No ${index + 1}`}</label>
           <input
             name={startDateId}
             data-id={index}
@@ -61,7 +55,6 @@ const Work = (props) => {
           ></input>
         </div>
         <div>
-          <label htmlFor={endDateId}>{`End Date No ${index + 1}`}</label>
           <input
             name={endDateId}
             data-id={index}

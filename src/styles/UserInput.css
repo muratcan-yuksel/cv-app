@@ -10,6 +10,9 @@
 }
 .space {
   height: 2px;
-  width: 70%;
+  width: 60%;
   background-color: black;
+}
+.button {
+  width: 30%;
 }

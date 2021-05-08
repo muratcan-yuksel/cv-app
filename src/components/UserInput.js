@@ -125,11 +125,15 @@ class UserInput extends Component {
         <Informatsion information={information} />
         <h1>Experience</h1>
         <Work work={work} />
-        <button onClick={this.addWork}>Add work experience</button>
+        <button className="button" onClick={this.addWork}>
+          Add work experience
+        </button>
 
         <h1>Education</h1>
         <Studies studies={studies} />
-        <button onClick={this.addStudies}>Add education</button>
+        <button className="button" onClick={this.addStudies}>
+          Add education
+        </button>
       </div>
     );
   }

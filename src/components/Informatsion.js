@@ -15,7 +15,6 @@ function Informatsion(props) {
       <div className="information" key={index}>
         <h1>Personal Information</h1>
         <div id="firstName">
-          <label htmlFor={firstNameId}>First Name</label>
           <input
             type="text"
             name={firstNameId}
@@ -28,7 +27,6 @@ function Informatsion(props) {
           />
         </div>
         <div>
-          <label htmlFor={lastNameId}>Last Name</label>
           <input
             type="text"
             name={lastNameId}
@@ -41,7 +39,6 @@ function Informatsion(props) {
           />
         </div>
         <div>
-          <label htmlFor={emailId}>Email</label>
           <input
             name={emailId}
             data-id={index}
@@ -54,7 +51,6 @@ function Informatsion(props) {
           />
         </div>
         <div>
-          <label htmlFor={telId}>Phone Number</label>
           <input
             type="tel"
             name={telId}
@@ -66,7 +62,6 @@ function Informatsion(props) {
           />
         </div>
         <div>
-          <label htmlFor={linkedinId}>LinkedIn</label>
           <input
             type="text"
             name={linkedinId}
@@ -78,7 +73,6 @@ function Informatsion(props) {
           />
         </div>
         <div>
-          <label htmlFor={githubId}>GitHub</label>
           <input
             type="text"
             name={githubId}
@@ -90,7 +84,6 @@ function Informatsion(props) {
           />
         </div>
         <div>
-          <label htmlFor={bioId}>Bio</label>
           <textarea
             name={bioId}
             data-id={index}
