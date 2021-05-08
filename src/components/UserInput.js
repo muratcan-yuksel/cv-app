@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Informatsion from "./Informatsion";
 import Work from "./Work";
 import Studies from "./Studies";
+import "../styles/UserInput.css";
 
 class UserInput extends Component {
   constructor(props) {
@@ -120,16 +121,15 @@ class UserInput extends Component {
     let { studies } = this.state;
     let { information } = this.state;
     return (
-      <div onChange={this.twoCalls}>
+      <div className="input" onChange={this.twoCalls}>
         <Informatsion information={information} />
         <h1>Experience</h1>
-
-        <button onClick={this.addWork}>Add work experience</button>
         <Work work={work} />
-        <h1>Education</h1>
+        <button onClick={this.addWork}>Add work experience</button>
 
-        <button onClick={this.addStudies}>Add education</button>
+        <h1>Education</h1>
         <Studies studies={studies} />
+        <button onClick={this.addStudies}>Add education</button>
       </div>
     );
   }

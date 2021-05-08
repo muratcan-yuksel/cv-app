@@ -3,3 +3,6 @@
   height: 100%;
   margin-left: 5em;
 }
+.information {
+  display: grid;
+}

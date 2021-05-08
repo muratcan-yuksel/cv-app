@@ -1,0 +1,15 @@
+.input {
+  margin-left: 5em;
+}
+.input * {
+  margin-right: 2em;
+  margin-bottom: 0.5em;
+  width: 70%;
+}
+#firstName {
+}
+.space {
+  height: 2px;
+  width: 70%;
+  background-color: black;
+}

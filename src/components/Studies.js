@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/UserInput.css";
 
 function Studies(props) {
   return props.studies.map((item, index) => {
@@ -59,6 +60,7 @@ function Studies(props) {
             className="schoolEndDate"
           ></input>
         </div>
+        <div className="space"></div>
       </div>
     );
   });

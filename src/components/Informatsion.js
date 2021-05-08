@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/UserInput.css";
 
 function Informatsion(props) {
   return props.information.map((item, index) => {
@@ -11,9 +12,9 @@ function Informatsion(props) {
       bioId = `${index}`;
 
     return (
-      <div key={index}>
+      <div className="information" key={index}>
         <h1>Personal Information</h1>
-        <div>
+        <div id="firstName">
           <label htmlFor={firstNameId}>First Name</label>
           <input
             type="text"
@@ -25,6 +26,8 @@ function Informatsion(props) {
             placeholder="Name"
             required
           />
+        </div>
+        <div>
           <label htmlFor={lastNameId}>Last Name</label>
           <input
             type="text"
@@ -97,6 +100,7 @@ function Informatsion(props) {
             placeholder="Talk about yourself a bit"
           />
         </div>
+        <div className="space"></div>
       </div>
     );
   });

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/UserInput.css";
 
 const Work = (props) => {
   return props.work.map((item, index) => {
@@ -70,6 +71,7 @@ const Work = (props) => {
             type="date"
           ></input>
         </div>
+        <div className="space"></div>
       </div>
     );
   });
