@@ -11,6 +11,8 @@
 }
 #generate {
   margin: 3em;
+  border-radius: 50%;
+  height: 5em;
 }
 /* .information {
   display: grid;
@@ -27,5 +29,4 @@ button {
   background-color: black;
   color: white;
   font-weight: 900;
-  border-radius: 10%;
 }

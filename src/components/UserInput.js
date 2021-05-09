@@ -122,6 +122,7 @@ class UserInput extends Component {
     let { information } = this.state;
     return (
       <div className="input" onChange={this.twoCalls}>
+        <div id="header">CV-maker</div>
         <Informatsion information={information} />
         <h1>Experience</h1>
         <Work work={work} />
