@@ -1,3 +1,9 @@
+body {
+  background: #eee9e9;
+  background: -webkit-linear-gradient(top right, #eee9e9, #efefef);
+  background: -moz-linear-gradient(top right, #eee9e9, #efefef);
+  background: linear-gradient(to bottom left, #eee9e9, #efefef);
+}
 .input {
   margin-left: 5em;
 }

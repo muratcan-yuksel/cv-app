@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import UserInput from "./UserInput";
 import jsPDF from "jspdf";
 import "../styles/PreviewCV.css";
 
@@ -59,7 +58,7 @@ class PreviewCV extends Component {
             <div className="space"></div>
           </section>
         </div>
-        <button onClick={this.generatePDF} type="primary">
+        <button id="generate" onClick={this.generatePDF} type="primary">
           Generate PDF
         </button>
       </div>
