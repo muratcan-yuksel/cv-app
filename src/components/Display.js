@@ -1,5 +1,5 @@
 // import React, { Component } from "react";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import UserInput from "./UserInput";
 import PreviewCV from "./PreviewCV";
 
@@ -23,7 +23,6 @@ import PreviewCV from "./PreviewCV";
 //     return <UserInput parentCallback={this.handleCallback} />;
 //   }
 // }
-//this does not work, we're gonna need to use useEffect I suppose
 function Display(props) {
   const [state, setState] = useState({ data: null });
 
@@ -32,7 +31,7 @@ function Display(props) {
   };
   const isFinished = props.isFinished;
   if (isFinished) {
-    return <PreviewCV toChild={state} />;
+    return <PreviewCV toChild={state.data} />;
   }
   return <UserInput parentCallback={handleCallback} />;
 }
